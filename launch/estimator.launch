@@ -1,0 +1,16 @@
+<launch>
+   <!-- Launch the Teraranger Evo -->
+   <node pkg="teraranger" name="teraranger_node" type="evo" output="screen" respawn="true" >
+      <param name="portname" type="str" value="/dev/tera" />
+      <param name="sensor_type" type="str" value="Evo_3m" />
+
+</node>
+
+   <!-- Launch the state estimator -->
+   <node pkg="z_state_estimator" name="z_state_estimator" type="safety_from_cliff.py" respawn="true" output="screen" >
+      <param name="cliff_drop_distance_lim" type="double" value="0.28" /> <!-- terabee is 0.18 m AGL -->
+      <param name="rear_tire_to_terabee_distance" type="double" value="0.85" />
+   </node>
+
+
+</launch>

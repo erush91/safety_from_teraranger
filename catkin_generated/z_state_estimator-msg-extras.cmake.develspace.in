@@ -1,0 +1,2 @@
+set(z_state_estimator_MESSAGE_FILES "/home/ohrad/catkin_ws/src/z_state_estimator/msg/ZStateEst.msg")
+set(z_state_estimator_SERVICE_FILES "")
